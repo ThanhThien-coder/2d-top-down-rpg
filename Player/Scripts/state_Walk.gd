@@ -3,7 +3,7 @@ extends State
 
 
 @export var WALKING_SPEED: int = 100
-@onready var Idle: State_Walk = $"../Idle"
+@onready var Idle: State_Idle = $"../Idle"
 
 
 # What happens when player enter this state
@@ -23,6 +23,10 @@ func Process( _delta: float ) -> State:
 		return Idle
 	
 	player.velocity = player.direction * WALKING_SPEED
+	
+	if player.SetDirection():
+		player.UpdateAnimation("Walk")
+	
 	return null
 
 

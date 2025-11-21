@@ -159,3 +159,4 @@ script = ExtResource("3_btcbx")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("4_gwnis")
+WALKING_SPEED = 150

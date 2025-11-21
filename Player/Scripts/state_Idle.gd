@@ -2,6 +2,8 @@ class_name State_Idle
 extends State
 
 
+@onready var Walk: State_Walk = $"../Walk"
+
 
 # What happens when player enter this state
 func Enter() -> void:
@@ -16,6 +18,9 @@ func Exit() -> void:
 
 # Ưhat happes during the _process update in this State
 func Process( _delta: float ) -> State:
+	if player.direction != Vector2.ZERO:
+		return Walk
+	
 	player.velocity = Vector2.ZERO
 	return null
 
