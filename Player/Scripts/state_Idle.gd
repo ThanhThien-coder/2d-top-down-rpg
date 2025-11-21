@@ -1,17 +1,11 @@
-class_name State
-extends Node
+class_name State_Idle
+extends State
 
-
-static var player: Player
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
 
 # What happens when player enter this state
 func Enter() -> void:
+	player.UpdateAnimation("Idle")
 	pass
 
 
@@ -22,6 +16,7 @@ func Exit() -> void:
 
 # Ưhat happes during the _process update in this State
 func Process( _delta: float ) -> State:
+	player.velocity = Vector2.ZERO
 	return null
 
 
