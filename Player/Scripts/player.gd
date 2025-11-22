@@ -16,9 +16,14 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	
-	direction.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
-	direction.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
-	
+	#direction.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+	#direction.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
+	direction = Vector2(
+		Input.get_axis("Left", "Right"),
+		Input.get_axis("Up", "Down")
+	).normalized()
+	direction = direction.normalized()
+	 
 	move_and_slide()
 
 

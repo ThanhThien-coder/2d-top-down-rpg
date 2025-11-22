@@ -137,6 +137,8 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 0.08726646
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -21)
@@ -160,3 +162,5 @@ script = ExtResource("3_btcbx")
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("4_gwnis")
 WALKING_SPEED = 150
+
+[node name="Camera2D" type="Camera2D" parent="."]
