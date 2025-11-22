@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cwkkrxr72166"]
 
-[ext_resource type="Texture2D" uid="uid://452vhjj3qldj" path="res://Player/Assets/ExamplePlayerSprite.png" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://wp6pptx8wkav" path="res://Player/Assets/PlayerSprite02.png" id="1_gwnis"]
 [ext_resource type="Script" uid="uid://d04ian24whpqf" path="res://Player/Scripts/Player_state_machine.gd" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://b7s7xc1e4nqmn" path="res://Player/Scripts/state_Idle.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://ounio2j42681" path="res://Player/Scripts/state_Walk.gd" id="4_gwnis"]
@@ -142,7 +142,7 @@ wall_min_slide_angle = 0.08726646
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -21)
-texture = ExtResource("1_l8h54")
+texture = ExtResource("1_gwnis")
 hframes = 21
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
