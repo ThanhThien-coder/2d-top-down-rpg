@@ -3,7 +3,8 @@ extends State
 
 
 @export var WALKING_SPEED: int = 100
-@onready var Idle: State_Idle = $"../Idle"
+@onready var Idle: State = $"../Idle"
+@onready var Attack: State = $"../Attack"
 
 
 # What happens when player enter this state
@@ -39,4 +40,6 @@ func Physics( _delta: float ) -> State:
 
 # What happens with Input in this State
 func HandleInput( _event: InputEvent ) -> State:
+	if _event.is_action_pressed("Attack"):
+		return Attack
 	return null
