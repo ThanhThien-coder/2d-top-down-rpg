@@ -1,4 +1,6 @@
 [gd_scene format=3 uid="uid://nhc2sgod0prg"]
 
 [node name="HurtBox" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
 monitoring = false
